@@ -1,17 +1,31 @@
 version: '3.1'
 services:
+  # Servicio de la aplicacion - python
   web:
+    # Imagen de la aplicacion, con su version
     image: odoo:16.0
+    # Servicio de base de datos que utiliza la aplicacion
+    # Esta aplicacion depende de este servicio
+    # No arrancará hasta que el servicio esté levantado
     depends_on:
       - db
+    # Mapeo de puertos para poder acceder desde mi maquina
     ports:
       - "8069:8069"
-
+  # Servicio gestor de base de datos
   db:
+    # Imagen utilizada y su version
     image: postgres:15
+    # Variables de entorno de la imagen postgres:15
     environment:
+      # Nombre de la base de datos del superuser
+      # Por defecto el mismo nombre que el superuser
       - POSTGRES_DB=postgres
+      # Contraseña superuser para conectarme desde fuera
       - POSTGRES_PASSWORD=odoo
+      # Usuario administrador
+      # No podemos cambiar porque odoo por defecto se conecta como postgres
       - POSTGRES_USER=odoo
+    # Mapeo de puertos para poder acceder a las bases de datos desde el IDE
     ports:
       - "5432:5432"
