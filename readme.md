@@ -67,8 +67,13 @@ Podemos analizar línea por línea lo que significa el código:
 Una vez configurado el docker-compose.yml, lanzamos el comando `docker-compose up -d` para ejecutar el archivo. Seguidamente hacemos un `docker-compose start` para iniciar los servicios.
 ![imagen](Capturas/dockerCompose.png)
 
+En el caso de que nos diera error debido al puerto, ya que puede estar ocupado, deberíamos cambiar de puerto en el docker-compose.yml, y volver a ejecutar el comando, o bien, parar el servicio que esté utilizando dicho puerto.
+Si queremos hacer la primera opción, debemos saber qué servicio está utilizando dicho puerto. Para ello, ejecutamos el comando `sudo netstat -putan | grep 5432`, y nos aparecerá una lista con los servicios que están utilizando los puertos.
+Una vez visto el servicio, lo detenemos con el comando `sudo service nombreServicio stop`, y volvemos a ejecutar el docker-compose.yml.
+
 **3. Configuramos la BD**
 
 En el IDE, vamos al símbolo de la pila que se encuentra a mano derecha, y cramos una nueva base de datos.
 En este caso, seleccionamos PostgreSQL, y cubrimos los datos que indicamos en el docker-compose.yml.
 ![imagen](Capturas/BD.png)
+
