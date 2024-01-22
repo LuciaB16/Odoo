@@ -80,10 +80,11 @@ En este caso, seleccionamos PostgreSQL, y cubrimos los datos que indicamos en el
 **4. Configuramos Odoo**
 
 En este momento, ya podemos acceder a Odoo desde el navegador.
-Para ello, introducimos la dirección IP `http://localhost:8069`, y nos aparecerá la página de inicio de sesión de Odoo.
+Para ello, introducimos la dirección IP `http://localhost:8069`, y nos aparecerá la página de inicio de sesión de Odoo. Primero debemos crear la base de datos.
 ![imagen](Capturas/odooInicioSesion.png)
-Cubrimos las credenciales y pulsamos sobre el botón "Create database".
+Cubrimos las credenciales,  y pulsamos sobre el botón "Create database".
 ![imagen](Capturas/odooInicioSesion2.png)
-Y ya podemos acceder a Odoo.
-![imagen](Capturas/odoo2.png)
+Una vez hecho, podemos iniciar sesión y acceder a Odoo.
+![imagen](Capturas/Odoo.png)
+![imagen](Capturas/Odoo2.png)
 
