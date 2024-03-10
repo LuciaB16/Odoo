@@ -64,7 +64,7 @@ Podemos analizar línea por línea lo que significa el código:
 
 **2. Ejecutamos el docker-compose.yml**
 
-Una vez configurado el docker-compose.yml, lanzamos el comando `docker-compose up -d` para ejecutar el archivo. Seguidamente hacemos un `docker-compose start` para iniciar los servicios.
+Una vez configurado el docker-compose.yml, lanzamos el comando `docker compose up -d` para ejecutar el archivo. Seguidamente hacemos un `docker compose start` para iniciar los servicios.
 ![imagen](Capturas/dockerCompose.png)
 
 En el caso de que nos diera error debido al puerto, ya que puede estar ocupado, deberíamos cambiar de puerto en el docker-compose.yml, y volver a ejecutar el comando, o bien, parar el servicio que esté utilizando dicho puerto.
