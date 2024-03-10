@@ -65,6 +65,8 @@ Podemos analizar línea por línea lo que significa el código:
 **2. Ejecutamos el docker-compose.yml**
 
 Una vez configurado el docker-compose.yml, lanzamos el comando `docker compose up -d` para ejecutar el archivo. Seguidamente hacemos un `docker compose start` para iniciar los servicios.
+<br>
+
 ![imagen](Capturas/dockerCompose.png)
 
 En el caso de que nos diera error debido al puerto, ya que puede estar ocupado, deberíamos cambiar de puerto en el docker-compose.yml, y volver a ejecutar el comando, o bien, parar el servicio que esté utilizando dicho puerto.
@@ -73,18 +75,28 @@ Una vez visto el servicio, lo detenemos con el comando `sudo service nombreServi
 
 **3. Configuramos la BD**
 
-En el IDE, vamos al símbolo de la pila que se encuentra a mano derecha, y cramos una nueva base de datos.
+En el IDE, vamos al símbolo de la pila que se encuentra a mano derecha, y creamos una nueva base de datos.
 En este caso, seleccionamos PostgreSQL, y cubrimos los datos que indicamos en el docker-compose.yml.
+<br>
+
 ![imagen](Capturas/BD.png)
 
 **4. Configuramos Odoo**
 
 En este momento, ya podemos acceder a Odoo desde el navegador.
 Para ello, introducimos la dirección IP `http://localhost:8069`, y nos aparecerá la página de inicio de sesión de Odoo. Primero debemos crear la base de datos.
+<br>
+
 ![imagen](Capturas/odooInicioSesion.png)
 Cubrimos las credenciales,  y pulsamos sobre el botón "Create database".
+<br>
+
 ![imagen](Capturas/odooInicioSesion2.png)
 Una vez hecho, podemos iniciar sesión y acceder a Odoo.
+<br>
+
 ![imagen](Capturas/Odoo.png)
+<br>
+
 ![imagen](Capturas/Odoo2.png)
 
